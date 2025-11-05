@@ -48,7 +48,7 @@ function Header() {
     const [token,setToken] = useContext(store);
     const [data,setData] = useState(null);
     useEffect(() =>{
-        axios.get('http://localhost:80/myprofile',{
+        axios.get('/myprofile',{
             headers: {
                 'x-token' : token
             }
