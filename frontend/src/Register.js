@@ -27,7 +27,7 @@ const Register = () => {
 
   const submitHandler = e => {
     e.preventDefault();
-    axios.post('http://localhost:80/register', data).then(res => {
+    axios.post('/register', data).then(res => {
       alert(res.data);
       setData({
         username: '',
