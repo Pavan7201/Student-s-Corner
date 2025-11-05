@@ -28,7 +28,7 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:80/login', data).then(
+    axios.post('/login', data).then(
       (res) => {
         setToken(res.data.token);
         history.push('/');
