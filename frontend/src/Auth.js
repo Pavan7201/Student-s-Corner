@@ -9,7 +9,7 @@ const Auth = () => {
 
   const handleSignUp = () => {
     axios
-      .post("http://localhost:80/signup", { name, email, password })
+      .post("/signup", { name, email, password })
       .then((response) => {
         setMessage(response.data.message);
       })
@@ -20,7 +20,7 @@ const Auth = () => {
 
   const handleLogin = () => {
     axios
-      .post("http://localhost:80/login", { email, password })
+      .post("/login", { email, password })
       .then((response) => {
         setMessage(response.data.message);
         // Save token to local storage
