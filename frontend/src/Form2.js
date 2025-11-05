@@ -31,7 +31,7 @@ function Form2() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8000/predict", formData)
+      .post("/predict", formData)
       .then((response) => {
         setResult(response.data.prediction);
       })
