@@ -7,7 +7,7 @@ function AllExperience(props) {
 
   useEffect(() => {
     if (props.searchTerm) {
-      fetch(`http://localhost:80/api/questions?tags=${props.searchTerm}`)
+      fetch(`/api/questions?tags=${props.searchTerm}`)
         .then(response => response.json())
         .then(data => {
           setQuestions(data);
